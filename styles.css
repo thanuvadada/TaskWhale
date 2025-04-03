@@ -1,0 +1,181 @@
+body {
+    background: url('lala.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #1a3d5f;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: linear-gradient(90deg, #1a3d5f, #14527b);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+    margin-top: 100px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    display: none;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#home {
+    display: block;
+}
+
+button {
+    background: #1a3d5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #14527b;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #1a3d5f;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* To-Do List Styles */
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Container for checkbox and task text to align them properly */
+.task-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Custom checkbox styling */
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1a3d5f;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #1a3d5f;
+}
+
+.task-text {
+    text-align: left;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-icon {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Water Tracker Styles */
+.water-glass, .water-bottle {
+    display: inline-block;
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.water-glass:hover, .water-bottle:hover {
+    opacity: 0.7;
+}
+
+/* Journal Styles */
+#journal {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    border-radius: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+#journalEntry {
+    background: rgba(0, 38, 77, 0.9);
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+}
+
+/* Pomodoro Timer Styles */
+#timerDisplay {
+    font-size: 48px;
+    margin: 20px 0;
+}
