@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a onclick="showSection('home')">Home</a></li>
+            <li><a onclick="showSection('water')">Water Tracker</a></li>
+            <li><a onclick="showSection('journal')">Journal</a></li>
+            <li><a onclick="showSection('pomodoro')">Pomodoro Timer</a></li>
+        </ul>
+    </nav>
+    
+    <!-- To-Do List Section -->
+    <section id="home">
+        <h1>To-Do List</h1>
+        <ul id="taskList"></ul>
+        <input type="text" id="taskInput" placeholder="New task">
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="resetTasks()">Reset</button>
+    </section>
+    
+    <!-- Water Tracker Section -->
+    <section id="water">
+        <h1>Water Tracker</h1>
+        <div id="waterGlasses"></div>
+        <button onclick="resetWater()">Reset</button>
+    </section>
+    
+    <!-- Journal Section -->
+    <section id="journal">
+        <h1>Journal</h1>
+        <input type="password" id="journalPass" placeholder="Enter password">
+        <button onclick="unlockJournal()">Unlock</button>
+        <textarea id="journalEntry" disabled placeholder="Loading..."></textarea>
+        <button id="saveJournalBtn" onclick="saveJournal()" disabled>Save</button>
+    </section>
+    
+    <!-- Pomodoro Timer Section -->
+    <section id="pomodoro">
+        <h1>Pomodoro Timer</h1>
+        <div id="timerDisplay">25:00</div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+    </section>
+    
+    <!-- Audio Elements for Pomodoro Timer -->
+    <audio id="pomodoroSound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <audio id="breakSound" src="https://www.soundjay.com/buttons/beep-02.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
